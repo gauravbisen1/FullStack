@@ -1,6 +1,10 @@
 import express from "express";
 const app = express();
 const PORT = process.env.PORT || 3000;
+import cors from "cors";
+app.use(cors({
+    origin: "*",
+}));
 
 app.get("/api/products", (req, res) => {
     const products = [

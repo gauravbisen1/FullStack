@@ -15,7 +15,9 @@ function App() {
       try {
         setLoading(true)
         setError(false)
-        const response = await axios.get('/api/products' , {
+        // const response = await axios.get('https://fullstack-xisd.onrender.com/api/products?search='+search , {
+        const response = await axios.get('http://localhost:3000/api/products?search='+search , {
+        
           signal: controller.signal //cancel all old request which hit in api but send in catch
         })
         setProducts(response.data)
