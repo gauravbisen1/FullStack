@@ -15,7 +15,7 @@ function App() {
       try {
         setLoading(true)
         setError(false)
-        const response = await axios.get('/api/products?search='+search , {
+        const response = await axios.get('/api/products' , {
           signal: controller.signal //cancel all old request which hit in api but send in catch
         })
         setProducts(response.data)
