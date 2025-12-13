@@ -35,6 +35,7 @@ app.get("/api/products", (req, res) => {
           image: "https://images.pexels.com/photos/9407364/pexels-photo-9407364.jpeg"  // backpack with laptop :contentReference[oaicite:4]{index=4}
         }
     ];
+    //http://localhost:3000/api/products?search=Watch 
     if(req.query.search){
         const filterProducts = products.filter(product =>
                 product.name.includes(req.query.search)
